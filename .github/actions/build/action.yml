@@ -49,3 +49,8 @@ runs:
       run: pnpm turbo --concurrency=2 --filter './packages/${{inputs.packages-only}}' build
       env:
         NODE_OPTIONS: "--max_old_space_size=4096"
+    - name: Save @scalar/api-reference
+      uses: actions/upload-artifact@v4
+      with:
+        name: api-reference
+        path: packages/api-reference/build
