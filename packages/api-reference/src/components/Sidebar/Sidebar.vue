@@ -163,7 +163,7 @@ onMounted(() => {
                       :isActive="hash === child.id"
                       :item="{
                         id: child.id,
-                        title: child.displayTitle ?? child.title,
+                        title: child.title,
                         select: child.select,
                         httpVerb: child.httpVerb,
                         deprecated: child.deprecated ?? false,
